@@ -16,7 +16,8 @@ export class ListDetailsComponent implements OnInit {
   ngOnInit() {
 
     this.route.paramMap.subscribe(
-      params => {this.item = listData});
+      params => {this.item = listData[params.get("index")]}
+      );
   }
 
 }
